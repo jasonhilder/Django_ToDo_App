@@ -1,0 +1,21 @@
+{% extends 'main/base.html' %}
+{% load crispy_forms_tags %}
+
+{% block title %} Sign Up {% endblock %}
+
+{% block content %}
+
+<div class="container">
+    <div class="ml-3 mr-3 row justify-content-center">    
+        <!-- using post as it is sending to the backend and has to be secure-->
+        <form class="" method="POST">
+            {% csrf_token %} <!-- django requires this for security or else it will break-->
+            {{form|crispy}} <!-- form is pulled from view in return {}, .as_p is for a super quick simple style use crispy forms later-->
+
+            <button type="submit" class="btn btn-info"> Register </button>
+            <p>Have an account? Log in <a href="/login"> here.</a></p>
+        </form>
+    </div>
+</div>
+
+{% endblock %}

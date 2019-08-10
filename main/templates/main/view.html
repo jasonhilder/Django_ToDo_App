@@ -1,0 +1,51 @@
+{% extends 'main/base.html' %}
+
+{% block title %} My Lists {% endblock %}
+
+{% block content %}
+
+<div class="container">
+    <div class="row justify-content-center">
+        <h1> Your To Do Lists </h1>
+    </div>
+    <div class="row justify-content-center">    
+        <ul class="list-group list-group-flush">
+            {% for td in user.todolist.all %}
+            <li class="list-group-item">
+            <a href="/{{td.id}}">{{td.name}} </a>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
+
+<div class="mt-4 container">
+        <div class="row justify-content-center">
+            <form method="POST"  action="#">
+                {% csrf_token %}
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <button class="btn btn-info" type="submit" name="addList" value="addList"> Create List</button>
+                        <input type="text" name="add-list">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+<div class="container">
+    <div class="row justify-content-center">
+        <form method="POST"  action="#">
+            {% csrf_token %}
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <button class="btn btn-info" type="submit" name="delList" value="deleteList"> Delete List</button>
+                    <input type="text" name="delete-list">
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+{% endblock %}
