@@ -7,25 +7,26 @@
 - Create/Read/Update/Delete personal lists and tasks
 - Update credentials
 - Track amount of lists, uncompleted and completed tasks.
+- Install the app on their phone, similar to a native app.
 
 ### What I Learnt
 
 This project's main focus was to learn the Django framework, starting with the basics and then trying to do ever so slightly more advanced tasks!
-As well as using bootstrap for the first time, which will explain the very "minimalistic" styling.
+As well as using bootstrap for the first time, which will explain the very "minimalistic" styling and finally deploying a Django project on Pythonanywhere
 
 Here is what I've learn't:
 - Using purely Bootstrap4 to style the pages
 - Creating Django projects and apps
 - How to use Django's views and url paths
-- How to use DJango's template inheritance
+- How to use Django's template inheritance
 - Creating "plugable" apps
 - Connecting my Django project to an external database
 - Django Model system
 - OnetoOne, OnetoMany and Foreignkeys with models
 - Extending the default models
 - Using Signals with models
-- How to deploy a Python/Django project on python anywhere
-- How to use the basics of javascript service workers to create a PWA of the project
+- How to deploy a Python/Django project on pythonanywhere
+- How to use the basics of a javascript service worker to create a PWA of the project
 
 ### A Few Steps Further
 
